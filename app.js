@@ -6,6 +6,10 @@ console.log(n)
 
 if ( n > 50) {
     alert(n + '%' + 'He loves you!')
-} else {
+} 
+if (n >= 30 && n <= 70) {
+    alert(n + '%' + 'its almost like crush!')
+}
+else {
     alert(n + '%' + 'Try again !')
 }
