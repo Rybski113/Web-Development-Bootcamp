@@ -1,10 +1,7 @@
-function lifeInWeeks(age) {
-    const yearRemaining = 90 - age
-    let days = yearRemaining * 365
-    let weeks = yearRemaining * 52
-    let months = yearRemaining * 12
+function bmiCalculator(weight, height) {
+   let bmi = weight / Math.pow(height, 2)
 
-    console.log('You have' + days + 'days', weeks + 'weeks' + 'and' + months + 'month left')
+   console.log(Math.round(bmi))
 }
 
-lifeInWeeks(30)
+bmiCalculator(94, 1.92)
