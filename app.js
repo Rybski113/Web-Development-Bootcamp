@@ -1,15 +1,14 @@
-function isLeap(year) {
-    if(year % 4 === 0) {
-        if(year % 100 === 0) {
-            if(year % 400 === 0) {
-                console.log('leap year')
-            }
-        } else {
-            console.log('leap year')
-        }
+const questList = ["Angela", "John", "Pam", "jack", "Nathan",]
+
+const questName = prompt("What is your name?")
+
+function quest() {
+    if(questList.includes(questName)) {
+        alert('Welcome!')
     } else {
-        console.log(' not a leap year')
+        alert('Sorry, you are not invited')
     }
 }
 
-isLeap(2001)
+
+quest()
