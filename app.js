@@ -1,14 +1,20 @@
-const questList = ["Angela", "John", "Pam", "jack", "Nathan",]
+const output = []
+let count = 1
 
-const questName = prompt("What is your name?")
-
-function quest() {
-    if(questList.includes(questName)) {
-        alert('Welcome!')
-    } else {
-        alert('Sorry, you are not invited')
+function fizzBuzz() {
+    if(count < 100) {
+        output.push(count)
+    count++
+    console.log(output)
+    }
+    if ( count % 3 === 0) {
+        console.log('Fizz!')
+    } 
+    if (count % 5 === 0) {
+        console.log('Buzz!')
+    }
+    if (count % 3 === 0 || count % 5 === 0) {
+        console.log('FizzBuzz!')
     }
 }
-
-
-quest()
+setInterval(fizzBuzz, 500)
