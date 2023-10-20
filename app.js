@@ -1,20 +1,22 @@
-const output = []
-let count = 1
 
-function fizzBuzz() {
-    if(count < 100) {
-        output.push(count)
-    count++
-    console.log(output)
+
+
+function fibonacciGenerator(n) {
+    let output = []
+    if (n === 0) {
+        output = [0]
+    } else if (n === 2) {
+            output = [0, 1] 
+        } else {
+            output = [0, 1]
+
+            for(let i = 2; i < n; i++) {
+                output.push( output[output.length - 2] + output[output.length -1])
+            }
+        }
+       console.log(output)
     }
-    if ( count % 3 === 0) {
-        console.log('Fizz!')
-    } 
-    if (count % 5 === 0) {
-        console.log('Buzz!')
-    }
-    if (count % 3 === 0 || count % 5 === 0) {
-        console.log('FizzBuzz!')
-    }
-}
-setInterval(fizzBuzz, 500)
+
+fibonacciGenerator(25)
+
+
